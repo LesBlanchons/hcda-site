@@ -1,0 +1,23 @@
+{
+  "name": "hcda-site",
+  "version": "1.0.0",
+  "description": "Site internet du Hockey Club des Deux Alpes (Les Blanchons des Deux Alpes)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.2"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

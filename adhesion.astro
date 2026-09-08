@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const tarifs = [
+  { categorie: '+18 ans', prix: '95 €' },
+  { categorie: '14-18 ans', prix: '65 €' },
+  { categorie: 'École de glace (-14 ans)', prix: '50 €' },
+];
+---
+<Layout
+  title="Adhésion & tarifs"
+  description="Tarifs d'adhésion au Hockey Club des Deux Alpes : 95€ (+18 ans), 65€ (14-18 ans), 50€ (école de glace, -14 ans)."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Adhésion & tarifs</h1>
+      <p>Rejoignez Les Blanchons des Deux Alpes pour la saison 2026-2027.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Cotisation annuelle</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tarifs.map((t) => (
+              <tr>
+                <td>{t.categorie}</td>
+                <td>{t.prix}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top:1.5rem;">
+        L'adhésion inclut la pratique en séances collectives selon le planning du groupe
+        (voir <a href="/equipes-et-planning/">équipes & planning</a>). Les modalités
+        d'inscription seront précisées avant l'ouverture de la saison.
+      </p>
+
+      <a class="btn btn-accent" href="/contact/">Demander les modalités d'inscription</a>
+    </div>
+  </section>
+</Layout>

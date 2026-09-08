@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# ⚠️ Nécessite Netlify Identity + Git Gateway activés sur le site Netlify
+# (Site settings > Identity > Enable Identity, puis Services > Git Gateway).
+# C'est ce qui permet à Corentin de se connecter à /admin/ sans toucher au code.
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "blog"
+    label: "Actualités"
+    label_singular: "Article"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { label: "Résumé (affiché dans la liste)", name: "excerpt", widget: "text" }
+      - { label: "Image de couverture", name: "cover", widget: "image", required: false }
+      - { label: "Brouillon (ne pas publier)", name: "draft", widget: "boolean", default: false }
+      - { label: "Contenu de l'article", name: "body", widget: "markdown" }

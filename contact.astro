@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Contact"
+  description="Contactez le Hockey Club des Deux Alpes — Les Blanchons pour toute question sur les séances tests, l'adhésion ou le partenariat."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>Une question sur le club, les séances tests ou l'adhésion ? Écrivez-nous.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width:640px;">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="societe">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <p style="display:none;">
+          <label>Ne pas remplir si vous êtes humain : <input name="societe" /></label>
+        </p>
+
+        <div class="form-field">
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" type="text" required />
+        </div>
+
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <div class="form-field">
+          <label style="display:flex; align-items:flex-start; gap:0.5rem; font-weight:400;">
+            <input type="checkbox" required style="width:auto; margin-top:0.25rem;" />
+            <span class="consent">
+              J'accepte que les informations saisies dans ce formulaire soient utilisées par
+              Les Blanchons des Deux Alpes pour répondre à ma demande. Elles ne sont ni
+              revendues ni transmises à des tiers, et conservées 12 mois maximum. Voir notre
+              <a href="/politique-de-confidentialite/">politique de confidentialité</a>.
+            </span>
+          </label>
+        </div>
+
+        <button class="btn btn-accent" type="submit" style="border:none; cursor:pointer;">Envoyer</button>
+      </form>
+
+      <p style="margin-top:2rem; color:var(--color-text-muted);">
+        Vous préférez écrire directement ? Contactez-nous à
+        <a href="mailto:lesblanchonsdesalpes@gmail.com">lesblanchonsdesalpes@gmail.com</a>.
+      </p>
+    </div>
+  </section>
+</Layout>

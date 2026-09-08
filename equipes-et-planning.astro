@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seances = [
+  { public: 'Ados / Adultes', frequence: '2 séances / semaine', horaire: '1h30 à 2h, fin de journée', jours: 'Mardi et dimanche (à confirmer)' },
+  { public: 'École de glace (-14 ans)', frequence: '1 séance / semaine', horaire: '1h', jours: 'Mercredi' },
+];
+---
+<Layout
+  title="Équipes & planning"
+  description="Groupes et planning des séances du Hockey Club des Deux Alpes : ados/adultes et école de glace pour les moins de 14 ans."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Équipes & planning</h1>
+      <p>Le club propose deux groupes de pratique dès l'ouverture de la saison hiver.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Planning hiver</h2>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Groupe</th>
+              <th>Fréquence</th>
+              <th>Durée</th>
+              <th>Jour(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {seances.map((s) => (
+              <tr>
+                <td>{s.public}</td>
+                <td>{s.frequence}</td>
+                <td>{s.horaire}</td>
+                <td>{s.jours}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:1rem;" class="tag">Jours définitifs à confirmer avant l'ouverture</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Saison</h2>
+      <p>
+        Le club est ouvert de début décembre à début mai, aux mêmes dates que la patinoire des
+        Deux Alpes. En été, place au roller hockey pour continuer à pratiquer hors saison de glace.
+      </p>
+    </div>
+  </section>
+</Layout>
