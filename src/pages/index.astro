@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const activites = [
+  {
+    titre: 'Hockey sur glace',
+    texte: "Ouvert à toutes et tous, ados comme adultes. Pratique régulière tout l'hiver sur la patinoire.",
+    icon: 'M4 20 L17 5 L20 5 L20 8 L9 20 Z',
+    icon2: 'circle',
+  },
+  {
+    titre: 'Roller hockey',
+    texte: "La pratique se poursuit l'été, hors saison de glace, pour ne jamais arrêter de jouer.",
+    icon: 'M4 12 L9 6 L20 6 L20 9 L11 9 L8 13 Z',
+    icon2: 'wheels',
+  },
+  {
+    titre: 'École de glace',
+    texte: 'Une séance dédiée aux moins de 14 ans pour apprendre les bases, dans la bonne humeur.',
+    icon: 'M3 19 Q7 13 12 19 Q17 13 21 19',
+    icon2: 'head',
+  },
+];
+
+const valeurs = [
+  { titre: 'Passion', texte: 'Le goût du jeu et de la glace, chevillé au corps.' },
+  { titre: 'Plaisir', texte: 'Jouer avant tout pour le plaisir, à tout âge et tout niveau.' },
+  { titre: 'Respect', texte: "Envers les coéquipiers, les adversaires et l'esprit du jeu." },
+  { titre: "Esprit d'équipe", texte: 'Une seule famille, du premier coup de patin à la compétition.' },
+];
+---
+<Layout
+  title="Les Blanchons des Deux Alpes"
+  description="Hockey Club des Deux Alpes — Les Blanchons. Hockey sur glace et roller hockey en Isère. Séances tests dès décembre 2026, ouvertes à tous, tout âge."
+>
+  <section class="hero hero-photo" style="background-image:url('/images/hero-rink.jpg');">
+    <div class="container">
+      <div class="pill-glass reveal">
+        <span class="dot-accent"></span>
+        <span class="eyebrow" style="margin:0;">Association loi 1901 · Les Deux Alpes</span>
+      </div>
+      <h1 class="reveal" style="animation-delay:.08s;">Les Blanchons<br />des Deux Alpes</h1>
+      <p class="reveal" style="font-style:italic; font-weight:600; color:var(--accent); font-size:1.15rem; animation-delay:.16s;">« Rejoins la famille des Blanchons »</p>
+      <p class="reveal" style="animation-delay:.22s;">
+        Le club de hockey sur glace et roller hockey des Deux Alpes fait sa rentrée.
+        Rejoins la famille des Blanchons dès les premières séances tests, en décembre 2026.
+      </p>
+      <div class="reveal" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem; animation-delay:.3s;">
+        <a class="btn btn-accent" href="/adhesion/">Voir les tarifs</a>
+        <a class="btn btn-outline" href="/evenements/">Séances tests décembre</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="info-bar-wrap container">
+    <div class="info-bar reveal" style="animation-delay:.36s;">
+      <div>Association loi 1901</div>
+      <div>Hockey sur glace &amp; roller</div>
+      <div>Saison déc. → mai</div>
+      <div>3 séances tests · déc. 2026</div>
+    </div>
+  </div>
+
+  <section style="padding-top:2.5rem;">
+    <div class="container">
+      <p class="eyebrow">Nos activités</p>
+      <h2 style="font-size:2.2rem; text-transform:none; max-width:600px;">Une montagne. Plusieurs façons de jouer.</h2>
+      <div class="grid grid-3" style="margin-top:2rem;">
+        {activites.map((a, i) => (
+          <div class="card-dark reveal" style={`animation-delay:${0.05 + i * 0.07}s;`}>
+            <div class="icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8">
+                {a.icon2 === 'wheels' ? (
+                  <>
+                    <circle cx="6" cy="19" r="2"></circle>
+                    <circle cx="18" cy="19" r="2"></circle>
+                    <path d={a.icon}></path>
+                  </>
+                ) : a.icon2 === 'head' ? (
+                  <>
+                    <path d={a.icon}></path>
+                    <circle cx="12" cy="7" r="3.2"></circle>
+                  </>
+                ) : (
+                  <>
+                    <circle cx="12" cy="17" r="2.4"></circle>
+                    <path d={a.icon}></path>
+                  </>
+                )}
+              </svg>
+            </div>
+            <h3 style="font-size:1.15rem;">{a.titre}</h3>
+            <p style="font-size:0.9rem;">{a.texte}</p>
+            <a href="/equipes-et-planning/" class="link-arrow">
+              Découvrir
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="eyebrow">La vie du club</p>
+      <h2 style="font-size:2.2rem; text-transform:none;">Actualités</h2>
+      <div class="card-dark reveal" style="margin-top:1.6rem; padding:3rem; min-height:180px; display:flex; align-items:flex-end; position:relative; overflow:hidden;">
+        <div>
+          <span class="tag" style="background:rgba(255,255,255,0.08); border-color:transparent; color:#fff;">Club</span>
+          <h3 style="color:#fff; font-size:1.5rem; margin-top:1rem; text-transform:none; max-width:640px;">Bienvenue sur le site des Blanchons des Deux Alpes</h3>
+          <p style="color:var(--muted); font-size:0.8rem; margin-top:0.6rem; letter-spacing:0.03em; text-transform:uppercase;">Septembre 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid" style="grid-template-columns:0.85fr 1.15fr; gap:3.5rem; align-items:center;">
+      <div class="img-zoom reveal" style="aspect-ratio:4/5;">
+        <img src="/images/mountains-sunset.jpg" alt="Montagnes des Deux Alpes au coucher du soleil" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+      <div>
+        <p class="eyebrow">Nos valeurs</p>
+        <h2 style="font-size:2.2rem; text-transform:none; margin-bottom:1.8rem;">Plus qu'un club.</h2>
+        <div>
+          {valeurs.map((v, i) => (
+            <div class="value-row">
+              <span class="num">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <div style="font-weight:700; font-size:1rem; text-transform:uppercase;">{v.titre}</div>
+                <p style="color:var(--muted-ink); font-size:0.9rem; margin-top:0.3rem;">{v.texte}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid" style="grid-template-columns:1fr 0.95fr; gap:3.5rem; align-items:center;">
+      <div class="img-zoom">
+        <img src="/images/team-adult-historic.jpg" alt="Équipe adulte des Blanchons des Deux Alpes" style="width:100%;" />
+      </div>
+      <div>
+        <p class="eyebrow">Le club</p>
+        <h2 style="font-size:2rem; text-transform:none; line-height:1.2;">Une histoire. Une montagne. Une passion.</h2>
+        <p style="color:var(--muted-ink); margin-top:1rem; max-width:460px;">
+          Les Blanchons des Deux Alpes existent depuis plusieurs années dans la mémoire de la station.
+          Le club se structure aujourd'hui en association loi 1901 pour repartir sur de nouvelles bases
+          et faire vivre cette passion sur le long terme.
+        </p>
+        <a class="btn btn-outline" style="background:var(--navy); color:#fff; margin-top:1.5rem;" href="/le-club/">Découvrir notre histoire</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container reveal">
+      <div>
+        <p class="eyebrow">Rejoins l'aventure</p>
+        <h2>Prêt à chausser les patins ?</h2>
+        <p>Une séance avec équipement complet et un maillot du club sont offerts par tirage au sort aux séances tests de décembre.</p>
+      </div>
+      <div style="display:flex; gap:1rem; flex-shrink:0; flex-wrap:wrap;">
+        <a href="/evenements/" class="btn btn-accent">Séances tests décembre</a>
+        <a href="/contact/" class="btn btn-outline">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align:center;">
+    <div class="container">
+      <p class="eyebrow">Partenaires</p>
+      <h2 style="font-size:1.7rem; text-transform:none;">Ils soutiennent la relance du club</h2>
+      <div class="grid grid-3" style="grid-template-columns:repeat(4, 1fr); margin-top:2.2rem;">
+        <div class="partner-tile">[Partenaire]</div>
+        <div class="partner-tile">[Partenaire]</div>
+        <div class="partner-tile">[Partenaire]</div>
+        <div class="partner-tile">[Partenaire]</div>
+      </div>
+      <a class="btn btn-outline" style="background:var(--navy); color:#fff; margin-top:2rem;" href="/partenaires/">Devenir partenaire</a>
+    </div>
+  </section>
+</Layout>
