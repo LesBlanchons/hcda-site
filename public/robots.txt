@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.lesblanchons2alpes.fr/sitemap-index.xml

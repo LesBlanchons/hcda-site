@@ -1,11 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import tarifsData from '../data/tarifs.json';
 
-const tarifs = [
-  { categorie: '+18 ans', prix: '95 €' },
-  { categorie: '14-18 ans', prix: '65 €' },
-  { categorie: 'École de glace (-14 ans)', prix: '50 €' },
-];
+const { tarifs } = tarifsData;
 ---
 <Layout
   title="Adhésion & tarifs"

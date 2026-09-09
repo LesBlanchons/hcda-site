@@ -1,10 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import planningData from '../data/planning.json';
 
-const seances = [
-  { public: 'Ados / Adultes', frequence: '2 séances / semaine', horaire: '1h30 à 2h, fin de journée', jours: 'Mardi et dimanche (à confirmer)' },
-  { public: 'École de glace (-14 ans)', frequence: '1 séance / semaine', horaire: '1h', jours: 'Mercredi' },
-];
+const { seances, note } = planningData;
 ---
 <Layout
   title="Équipes & planning"
@@ -42,7 +40,7 @@ const seances = [
           </tbody>
         </table>
       </div>
-      <p style="margin-top:1rem;" class="tag">Jours définitifs à confirmer avant l'ouverture</p>
+      <p style="margin-top:1rem;" class="tag">{note}</p>
     </div>
   </section>
 

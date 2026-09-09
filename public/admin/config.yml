@@ -23,3 +23,39 @@ collections:
       - { label: "Image de couverture", name: "cover", widget: "image", required: false }
       - { label: "Brouillon (ne pas publier)", name: "draft", widget: "boolean", default: false }
       - { label: "Contenu de l'article", name: "body", widget: "markdown" }
+
+  - name: "parametres"
+    label: "Paramètres du site"
+    label_singular: "Paramètre"
+    files:
+      - name: "tarifs"
+        label: "Tarifs (Adhésion)"
+        file: "src/data/tarifs.json"
+        fields:
+          - label: "Tarifs"
+            name: "tarifs"
+            widget: "list"
+            fields:
+              - { label: "Catégorie", name: "categorie", widget: "string" }
+              - { label: "Prix", name: "prix", widget: "string" }
+
+      - name: "planning"
+        label: "Planning hiver"
+        file: "src/data/planning.json"
+        fields:
+          - label: "Groupes"
+            name: "seances"
+            widget: "list"
+            fields:
+              - { label: "Public", name: "public", widget: "string" }
+              - { label: "Fréquence", name: "frequence", widget: "string" }
+              - { label: "Durée", name: "horaire", widget: "string" }
+              - { label: "Jour(s)", name: "jours", widget: "string" }
+          - { label: "Note sous le tableau", name: "note", widget: "string" }
+
+      - name: "seances_tests"
+        label: "Séances tests (Événements)"
+        file: "src/data/seances-tests.json"
+        fields:
+          - { label: "Période affichée (ex. Décembre 2026)", name: "periode", widget: "string" }
+          - { label: "Dates précises", name: "datesPrecises", widget: "string" }

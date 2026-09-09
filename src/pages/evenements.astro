@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import seancesData from '../data/seances-tests.json';
+
+const { periode, datesPrecises } = seancesData;
 ---
 <Layout
   title="Événements"
@@ -15,14 +18,14 @@ import Layout from '../layouts/Layout.astro';
   <section>
     <div class="container">
       <div class="card">
-        <p class="tag">Décembre 2026</p>
+        <p class="tag">{periode}</p>
         <h2>Séances tests de découverte</h2>
         <p>
           Trois séances tests sont organisées début décembre 2026, ouvertes à toutes et tous,
           quel que soit l'âge. Aucune expérience n'est requise et du matériel peut être prêté
           sur place.
         </p>
-        <p><strong>Dates précises :</strong> à confirmer prochainement.</p>
+        <p><strong>Dates précises :</strong> {datesPrecises}.</p>
         <div style="display:flex; gap:1rem; flex-wrap:wrap;">
           <a class="btn btn-accent" href="/contact/">Être informé des dates</a>
           <a class="btn btn-outline" style="background:var(--color-primary); color:#fff;" href="/downloads/affiche-blanchons.jpg" target="_blank" rel="noopener">Voir l'affiche</a>

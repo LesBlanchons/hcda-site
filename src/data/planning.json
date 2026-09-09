@@ -1,0 +1,7 @@
+{
+  "seances": [
+    { "public": "Ados / Adultes", "frequence": "2 séances / semaine", "horaire": "1h30 à 2h, fin de journée", "jours": "Mardi et dimanche (à confirmer)" },
+    { "public": "École de glace (-14 ans)", "frequence": "1 séance / semaine", "horaire": "Environ 1h30", "jours": "Mercredi (à l'étude)" }
+  ],
+  "note": "Jours définitifs à confirmer avant l'ouverture"
+}
