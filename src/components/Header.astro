@@ -1,0 +1,28 @@
+---
+const { pathname } = Astro.url;
+const links = [
+  { href: '/', label: 'Accueil' },
+  { href: '/le-club/', label: 'Le club' },
+  { href: '/equipes-et-planning/', label: 'Équipes & planning' },
+  { href: '/evenements/', label: 'Événements' },
+  { href: '/adhesion/', label: 'Adhésion & tarifs' },
+  { href: '/partenaires/', label: 'Partenaires' },
+  { href: '/blog/', label: 'Actualités' },
+  { href: '/contact/', label: 'Contact' },
+];
+---
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <span class="brand-badge">
+        <img src="/images/logo.png" alt="Logo Les Blanchons des Deux Alpes" width="40" height="40" />
+      </span>
+      <span>Les Blanchons des Deux Alpes</span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      {links.map((link) => (
+        <a href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
