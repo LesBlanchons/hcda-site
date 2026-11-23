@@ -67,9 +67,3 @@ collections:
               - { label: "Horaire", name: "horaire", widget: "string" }
           - { label: "Infos pratiques (une ligne par info)", name: "infosPratiques", widget: "list" }
           - { label: "Goûter / pot de fin de séance", name: "gouter", widget: "text" }
-          - label: "Tombola"
-            name: "tombola"
-            widget: "object"
-            fields:
-              - { label: "Titre", name: "titre", widget: "string" }
-              - { label: "Texte", name: "texte", widget: "text" }

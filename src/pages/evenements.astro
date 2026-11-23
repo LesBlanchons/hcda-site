@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import seancesData from '../data/seances-tests.json';
 
-const { periode, groupes, infosPratiques, gouter, tombola } = seancesData;
+const { periode, groupes, infosPratiques, gouter } = seancesData;
 ---
 <Layout
   title="Événements"
-  description="Séances tests de découverte du Hockey Club des Deux Alpes en décembre 2026 : dates par groupe, infos pratiques, goûter et tombola de maillots floqués."
+  description="Séances tests de découverte du Hockey Club des Deux Alpes en décembre 2026 : dates par groupe et infos pratiques."
 >
   <section class="hero">
     <div class="container">
@@ -53,22 +53,7 @@ const { periode, groupes, infosPratiques, gouter, tombola } = seancesData;
           ))}
         </ul>
 
-        <p>{gouter}</p>
-
-        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem;">
-          <a class="btn btn-accent" href="/contact/">Être informé des dates</a>
-          <a class="btn btn-outline" style="background:var(--color-primary); color:#fff;" href="/downloads/affiche-blanchons.jpg" target="_blank" rel="noopener">Voir l'affiche</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="card">
-        <p class="tag">Tombola</p>
-        <h2>{tombola.titre}</h2>
-        <p>{tombola.texte}</p>
+        <p style="margin-bottom:0;">{gouter}</p>
       </div>
     </div>
   </section>

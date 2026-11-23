@@ -7,12 +7,6 @@ const benefices = [
   { titre: 'Valorisez', texte: 'Votre entreprise auprès d\'un public local et touristique.' },
   { titre: 'Ensemble', texte: 'Pour le développement du hockey aux Deux Alpes.' },
 ];
-
-const paliers = [
-  { nom: 'Partenaire majeur', contrepartie: 'Financement des maillots et d\'une partie du matériel' },
-  { nom: 'Catégorie 1', contrepartie: '1 000 € sur 3 ans' },
-  { nom: 'Catégorie 2', contrepartie: '500 € sur 3 ans' },
-];
 ---
 <Layout
   title="Partenaires"
@@ -47,31 +41,6 @@ const paliers = [
           </div>
         ))}
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Paliers de partenariat</h2>
-      <div style="overflow-x:auto;">
-        <table>
-          <thead>
-            <tr>
-              <th>Palier</th>
-              <th>Contrepartie</th>
-            </tr>
-          </thead>
-          <tbody>
-            {paliers.map((p) => (
-              <tr>
-                <td>{p.nom}</td>
-                <td>{p.contrepartie}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p style="margin-top:1rem;" class="tag">Détails et modalités à discuter selon votre projet</p>
     </div>
   </section>
 

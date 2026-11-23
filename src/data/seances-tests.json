@@ -17,9 +17,5 @@
     "Le club peut prêter une partie du matériel, mais ne peut pas garantir en avoir pour tout le monde",
     "Pensez à apporter : casque de ski, gants épais, protège-genoux et protège-coudes"
   ],
-  "gouter": "Un goûter / pot sera servi à la fin de chaque séance, pour prendre le temps à tous de faire connaissance.",
-  "tombola": {
-    "titre": "Tombola : 3 maillots floqués à gagner",
-    "texte": "Pour fêter ces séances tests, trois maillots floqués du club sont offerts par tirage au sort parmi les participants : un maillot enfant, un maillot ado et un maillot adulte."
-  }
+  "gouter": "Un goûter / pot sera servi à la fin de chaque séance, pour prendre le temps à tous de faire connaissance."
 }

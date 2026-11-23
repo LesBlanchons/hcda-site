@@ -9,7 +9,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), camera=(), microphone=()"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://identity.netlify.com https://unpkg.com; connect-src 'self' https://api.netlify.com;"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://identity.netlify.com https://unpkg.com; connect-src 'self' https://api.netlify.com;"
 
 # Le back-office Decap CMS (/admin/) a besoin d'évaluer du JavaScript dynamiquement pour
 # se charger (bibliothèque decap-cms) : on assouplit donc la CSP uniquement sur cette
