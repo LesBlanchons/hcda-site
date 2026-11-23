@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import seancesData from '../data/seances-tests.json';
 
-const { periode, datesPrecises } = seancesData;
+const { periode, groupes, infosPratiques, gouter, tombola } = seancesData;
 ---
 <Layout
   title="Événements"
-  description="Séances tests de découverte du Hockey Club des Deux Alpes début décembre 2026 — ouvertes à tous, tout âge, matériel prêté."
+  description="Séances tests de découverte du Hockey Club des Deux Alpes en décembre 2026 : dates par groupe, infos pratiques, goûter et tombola de maillots floqués."
 >
   <section class="hero">
     <div class="container">
@@ -21,12 +21,41 @@ const { periode, datesPrecises } = seancesData;
         <p class="tag">{periode}</p>
         <h2>Séances tests de découverte</h2>
         <p>
-          Trois séances tests sont organisées début décembre 2026, ouvertes à toutes et tous,
-          quel que soit l'âge. Aucune expérience n'est requise et du matériel peut être prêté
-          sur place.
+          Des séances tests sont organisées en décembre 2026, ouvertes à toutes et tous,
+          quel que soit l'âge. Aucune expérience n'est requise.
         </p>
-        <p><strong>Dates précises :</strong> {datesPrecises}.</p>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+
+        <div style="overflow-x:auto; margin-top:1.5rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>Groupe</th>
+                <th>Dates</th>
+                <th>Horaire</th>
+              </tr>
+            </thead>
+            <tbody>
+              {groupes.map((g) => (
+                <tr>
+                  <td>{g.nom}</td>
+                  <td>{g.dates}</td>
+                  <td>{g.horaire}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top:2rem; font-size:1.1rem;">Infos pratiques</h3>
+        <ul style="color:var(--color-text-muted); padding-left:1.2rem; margin:0 0 1em;">
+          {infosPratiques.map((info) => (
+            <li style="margin-bottom:0.4rem;">{info}</li>
+          ))}
+        </ul>
+
+        <p>{gouter}</p>
+
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem;">
           <a class="btn btn-accent" href="/contact/">Être informé des dates</a>
           <a class="btn btn-outline" style="background:var(--color-primary); color:#fff;" href="/downloads/affiche-blanchons.jpg" target="_blank" rel="noopener">Voir l'affiche</a>
         </div>
@@ -37,12 +66,9 @@ const { periode, datesPrecises } = seancesData;
   <section>
     <div class="container">
       <div class="card">
-        <p class="tag">Tombola de lancement</p>
-        <h2>Une séance avec équipement complet à gagner</h2>
-        <p>
-          Pour fêter cette rentrée, une séance avec équipement complet ainsi qu'un maillot du
-          club sont offerts par tirage au sort parmi les participants aux séances tests.
-        </p>
+        <p class="tag">Tombola</p>
+        <h2>{tombola.titre}</h2>
+        <p>{tombola.texte}</p>
       </div>
     </div>
   </section>

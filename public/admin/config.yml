@@ -58,4 +58,18 @@ collections:
         file: "src/data/seances-tests.json"
         fields:
           - { label: "Période affichée (ex. Décembre 2026)", name: "periode", widget: "string" }
-          - { label: "Dates précises", name: "datesPrecises", widget: "string" }
+          - label: "Groupes (dates et horaires)"
+            name: "groupes"
+            widget: "list"
+            fields:
+              - { label: "Nom du groupe", name: "nom", widget: "string" }
+              - { label: "Dates", name: "dates", widget: "string" }
+              - { label: "Horaire", name: "horaire", widget: "string" }
+          - { label: "Infos pratiques (une ligne par info)", name: "infosPratiques", widget: "list" }
+          - { label: "Goûter / pot de fin de séance", name: "gouter", widget: "text" }
+          - label: "Tombola"
+            name: "tombola"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Texte", name: "texte", widget: "text" }

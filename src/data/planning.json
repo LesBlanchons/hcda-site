@@ -1,7 +1,7 @@
 {
   "seances": [
-    { "public": "Ados / Adultes", "frequence": "2 séances / semaine", "horaire": "1h30 à 2h, fin de journée", "jours": "Mardi et dimanche (à confirmer)" },
-    { "public": "École de glace (-14 ans)", "frequence": "1 séance / semaine", "horaire": "Environ 1h30", "jours": "Mercredi (à l'étude)" }
+    { "public": "Ados / Adultes (+14 ans)", "frequence": "2 séances / semaine", "horaire": "2h, de 20h à 22h", "jours": "Mardi et dimanche" },
+    { "public": "École de glace et Ados (14 ans et moins)", "frequence": "1 séance / semaine", "horaire": "1h15, de 17h30 à 18h45", "jours": "Mercredi" }
   ],
-  "note": "Jours définitifs à confirmer avant l'ouverture"
+  "note": "Accès à la patinoire 30 minutes avant le début de chaque séance"
 }

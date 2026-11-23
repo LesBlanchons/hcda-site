@@ -25,6 +25,13 @@ const { Content } = await render(post);
 
   <section>
     <div class="container" style="max-width:760px;">
+      {post.data.cover && (
+        <img
+          src={post.data.cover}
+          alt={post.data.title}
+          style="width:100%; border-radius: var(--radius); margin-bottom:2rem; aspect-ratio:16/9; object-fit:cover;"
+        />
+      )}
       <article>
         <Content />
       </article>
