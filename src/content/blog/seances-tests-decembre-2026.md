@@ -21,7 +21,7 @@ Quelques infos pratiques avant de venir :
 
 À la fin de chaque séance, un **goûter** (et un petit pot pour les adultes) sera servi sur place, pour prendre le temps à tous de faire connaissance.
 
-Et pour fêter l'événement, **nous essaierons d'organiser une Tombola** : trois maillots du club, floqués, seront offerts par tirage au sort parmi les participants — un maillot enfant, un maillot ado et un maillot adulte.
+Et pour fêter l'événement, **nous essaierons d'organiser une Tombola** : deux maillots du club, floqués, seront offerts par tirage au sort parmi les participants — un maillot enfant/ado et un maillot adulte.
 
 Aucune inscription préalable n'est nécessaire : présentez-vous directement aux horaires indiqués, ou [contactez-nous](/contact/) pour toute question. Toutes les infos restent également disponibles sur la page [Événements](/evenements/).
 
