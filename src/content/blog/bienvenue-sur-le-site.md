@@ -1,8 +1,9 @@
 ---
-title: "Bienvenue sur le site des Blanchons des Deux Alpes"
+title: Bienvenue sur le site des Blanchons des Deux Alpes
 date: 2026-09-08
-excerpt: "Le Hockey Club des Deux Alpes lance officiellement son site internet. Retour sur les premières étapes du projet."
-cover: "/images/blog/bienvenue-logo-cover.jpg"
+excerpt: Le Hockey Club des Deux Alpes lance officiellement son site internet.
+  Retour sur les premières étapes du projet.
+cover: ""
 draft: false
 ---
 
